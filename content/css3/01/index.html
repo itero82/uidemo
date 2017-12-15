@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<meta name="viewport" content="width=device-width">
+<script type="text/javaScript" src="http://mobile-web-ydonline.ncucu.com/ui/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://mobile-web-ydonline.ncucu.com/ui/js/jquery.easing-1.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+</head>
+<body>
+<div id="wrapper">
+    <header>
+        <a href="../../../index.html">UI DEMO</a>
+    </header>
+
+    <!-- container_wrap -->
+    <div id="container_wrap">
+        <!-- container -->
+        <div id="container">
+            <!-- contents -->
+            <div id="contents">   
+                <!-- 1set -->
+                <div>
+                    <div class="title">CSS3 가상클래스 :nth-child(N)</div>
+
+                    <hr />
+
+                    <article>
+                        <div class="sub_title">
+                             <div class="entry_meta">
+                                <span class="category">IE 9</span>
+                            </div>
+                            <div class="entry_title">
+                                1. 기본 숫자
+                            </div>
+                        </div>
+                        <!-- entry_summary -->
+                        <div class="entry_summary">
+                            괄호안에 5라는 숫자를 넣게 되면 5번째 자식요소를 가리키게 된다. 아주 간단하다. 
+<pre>
+ul li:nth-child(5) {
+    color: #ccc;
+}
+</pre>
+                        </div>
+                        <!-- //entry_summary -->
+                        
+                        <div class="sub_title">
+                            <div class="entry_title">
+                                2. 키워드 : odd or even
+                            </div>
+                        </div>
+                        <!-- entry_summary -->
+                        <div class="entry_summary">
+                            “even”은 짝수의 순번(2, 4, 6…)을 가리키고, “odd”는 홀수의 순번(1, 3, 5…)을 가리킨다.
+<pre>
+ul li:nth-child(odd) {  
+    color: #ccc;
+}
+
+tr:nth-child(even) {  
+    color: #ccc;
+}
+</pre>
+                        </div>
+                        <!-- //entry_summary -->
+                        
+                        <div class="sub_title">
+                            <div class="entry_title">
+                               3. 표현수 : an+b
+                            </div>
+                        </div>
+                        <!-- entry_summary -->
+                        <div class="entry_summary">
+                           표현수를 제대로 사용하기 위해서는 “N”과 “대수방정식”을 이해하여야 한다. “N”은 0부터 시작되고, 양의 정수(b)를 설정하면 방정식은 완성된다. 그래서 3n은 “3xn”이 되고, 양의 정수(b)에 3을 대입하면 전체 방정식은 “(3xn)+3″이 된다. 그렇다면, 0과 양의 정수를 대입하여 실례를 들어보자. <br /><br />
+                           Ex) 3n+3이라는 표현수는 어떻게 적용이 되어질까?
+<pre>
+(3 x 0) + 3 = 3 = 3rd 요소
+(3 x 1) + 3 = 6 = 6th 요소
+(3 x 2) + 3 = 9 = 9th 요소
+</pre>
+                           Ex) 2n+1이라는 표현수는 어떻게 적용이 되어질까?
+<pre>
+(2 x 0) + 1 = 1 = 1st 요소
+(2 x 1) + 1 = 3 = 3rd 요소
+(2 x 2) + 1 = 5 = 5th 요소
+</pre>
+                           Ex) 여기서 “odd”와 “even”과 같은 방정식으로 “3n+0″ 또는 간단하게 “3n”으로 대신할 수 있다.
+<pre>
+(3 x 0) = 0 = no match
+(3 x 1) = 3 = 3rd 요소
+(3 x 2) = 6 = 6th 요소
+(3 x 3) = 9 = 9th 요소
+</pre>
+                           Ex) 이번에는 “+3″이라는 양의 정수 대신에 음의 정수를 사용해 보자. 그럼 4n-1은 어떻게 적용이 되어 질까?
+<pre>
+(4 x 0) - 1 = -1 = no match
+(4 x 1) - 1 = 3 = 3rd 요소
+(4 x 2) - 1 = 7 = 7th 요소
+</pre>
+<pre>
+  ul li:nth-child(3n+3) {  
+    color: #ccc;
+  }
+
+  ol li:nth-child(3n) {  
+    color: #ccc;
+  }
+
+  tr:nth-child(4n-1) {  
+    color: #ccc;
+  }
+</pre>
+                        </div>
+                        <!-- //entry_summary -->
+                        
+                        <div class="sub_title">
+                            <div class="entry_title">
+                                4. CSS예제
+                            </div>
+                        </div>
+                        <!-- entry_summary -->
+                        <div class="entry_summary">
+<style> 
+.example1 p:nth-child(3n+0) {
+    background: red;
+    color:#fff;
+}
+</style>
+<pre>
+.example1 p:nth-child(3n+0) {
+    background: red;
+    color:#fff;
+}
+</pre>
+<pre>
+
+<div class="example1">
+<p>The first paragraph.</p>
+<p>The second paragraph.</p>
+<p>The third paragraph.</p>
+<p>The fourth paragraph.</p>
+<p>The fifth paragraph.</p>
+<p>The sixth paragraph.</p>
+<p>The seventh paragraph.</p>
+<p>The eight paragraph.</p>
+<p>The ninth paragraph.</p>
+</div>
+</pre>
+                        </div>
+                        <!-- //entry_summary -->
+                        
+                        <div class="sub_title">
+                            <div class="entry_title">
+                                5. JavaScript(jQuery) 예제
+                            </div>
+                        </div>
+                        <!-- entry_summary -->
+                        <div class="entry_summary">
+<pre>
+$('.example2 p:nth-child(4n-1)')
+    .on('mouseover', function() {
+        $(this).css({
+            background: '#ae5e9b',
+            color: '#fff'
+        });
+    })
+    .on('mouseout', function(){
+        $(this).css({
+            background: 'none',
+            color: '#000'
+        });
+    });
+</pre>
+
+<style>
+.example2 p {cursor:pointer;}
+</style>
+
+                        선택줄에 마우스를 올려보세요!
+<pre>
+<div class="example2">
+<p>The first paragraph.</p>
+<p>The second paragraph.</p>
+<p>The third paragraph.</p>
+<p>The fourth paragraph.</p>
+<p>The fifth paragraph.</p>
+<p>The sixth paragraph.</p>
+<p>The seventh paragraph.</p>
+<p>The eight paragraph.</p>
+<p>The ninth paragraph.</p>
+</div>
+</pre>
+
+<script> 
+$(document).ready(function(){
+    $('.example2 p:nth-child(4n-1)')
+        .on('mouseover', function() {
+            $(this).css({
+                background: '#ae5e9b',
+                color: '#fff'
+            });
+        })
+        .on('mouseout', function(){
+            $(this).css({
+                background: 'none',
+                color: '#000'
+            });
+        });
+});
+</script>
+                        </div>
+                        <!-- //entry_summary -->
+
+                    </article>
+                </div>
+                <!-- //1set -->
+
+            </div>
+            <!-- //contents -->    
+        </div>
+        <!-- //container -->
+    </div>
+    <!-- //container_wrap -->
+
+    <div id="footer">
+        <p class="copyright">2016 &copy LEEYOUNGEUN</p>
+    </div>    
+</div>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+$(document).ready(function(){
+
+
+	$(".item .block img").mouseenter(function(){
+		$(".block_info").show();
+	});
+	$(".block_info").mouseleave(function(){
+		$(".block_info").hide();
+	});
+});

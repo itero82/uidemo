@@ -1,0 +1,342 @@
+@charset "UTF-8"; 
+
+* {
+	margin: 0;
+	padding: 0
+}
+
+header, footer, section, article, aside, nav, hgroup, details, menu,
+	figure, figcaption {
+	display: block
+}
+
+body, p, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th,
+	td, form, fieldset, legend, input, textarea, select, button, code,
+	label, em, span {
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+	font-family: 돋움, dotum, AppleGothic, arial, sans-serif;
+	font-size: 12px;
+	color: #000006;
+	word-break: break-all
+}
+
+form {
+	margin: 0
+}
+
+img, fieldset {
+	border: 0
+}
+
+hr {
+	display: none
+}
+
+li {
+	list-style: none
+}
+
+em, address {
+	font-style: normal
+}
+
+label, input, select, textarea {
+	vertical-align: middle
+}
+
+legend {
+	position: absolute;
+	left: -5000px;
+	font-size: 0;
+	overflow: hidden
+}
+
+caption {
+	position: relative;
+	left: -5000px;
+	height: 0;
+	line-height: 0;
+	text-indent: -5000px;
+	overflow: hidden
+}
+
+a:link, a:active, a:visited, a {
+	text-decoration: none;
+	color: inherit;
+	outline: none
+}
+
+a:hover {
+	text-decoration: none
+}
+
+.invisible {
+	position: absolute;
+	left: -5000px;
+	height: 0;
+	line-height: 0;
+	overflow: hidden
+}
+
+.ellipsis {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis
+}
+
+body, html {
+	width: 100%;
+	height: 100%
+}
+
+ @charset "UTF-8"; 
+
+* {
+	margin: 0;
+	padding: 0
+}
+
+header, footer, section, article, aside, nav, hgroup, details, menu,
+	figure, figcaption {
+	display: block
+}
+
+body, p, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th,
+	td, form, fieldset, legend, input, textarea, select, button, code,
+	label, em, span {
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+	font-family: 돋움, dotum, AppleGothic, arial, sans-serif;
+	font-size: 12px;
+	color: #000006;
+	word-break: break-all
+}
+
+form {
+	margin: 0
+}
+
+img, fieldset {
+	border: 0
+}
+
+hr {
+	display: none
+}
+
+li {
+	list-style: none
+}
+
+em, address {
+	font-style: normal
+}
+
+label, input, select, textarea {
+	vertical-align: middle
+}
+
+.inner_wrap {
+	position: absolute;
+	width: 100%;
+	clear: both;
+	margin: 0 auto;
+	top: -150px;
+	left: 100px;
+	z-index: 99;
+	text-align: center
+}
+
+.inner_wrap .inner_container {
+	width: 1200px;
+	margin: 0 auto;
+	*zoom: 1
+}
+
+.inner_wrap .inner_container:after {
+	display: block;
+	visibility: hidden;
+	height: 0;
+	font-size: 0;
+	clear: both;
+	content: ''
+}
+
+.col_C {
+	position: relative;
+	height: 919px;
+	/* background:
+		url("http://static.dsark.com/dragonica/images/event/161130/evn3_bg.jpg")
+		no-repeat 0 0 */
+}
+
+.col_C img {
+	position: relative;
+	top: 640px;
+	left: 495px
+}
+
+.col_C .roulette {
+	position: relative;
+	top: 345px
+}
+
+.col_C .roulette .roulette_bg {
+	z-index: 100;
+	left: -50px;
+	top: 0
+}
+
+.col_C .roulette .roulette_arrow {
+	z-index: 1000;
+	left: -328px;
+	top: -220px
+}
+
+.col_C .roulette .roulette_img {
+	z-index: 500;
+	left: -600px;
+	top: 0
+}
+
+.col_C .roulette .roulette_start {
+	z-index: 1000;
+	position: relative;
+	left: -907px;
+	top: -55px;
+	display: inline-block;
+	background:
+		url("http://static.dsark.com/dragonica/images/event/161130/btn_wheel_off.png")
+		no-repeat 0 0;
+	width: 132px;
+	height: 132px
+}
+
+.col_C .roulette .roulette_start span {
+	text-indent: -9999px;
+	display: block
+}
+
+.col_C .roulette .roulette_start.on {
+	/* background:
+		url("http://static.dsark.com/dragonica/images/event/161130/btn_wheel_on.png")
+		no-repeat 0 0 */
+}
+
+.col_C .roulette .roulette_start.on span {
+	display: inline-block;
+	position: relative;
+	color: #fff;
+	font-size: 13px;
+	font-weight: 600;
+	top: 80px;
+	text-indent: 0
+}
+
+
+.footer {
+	width: 1200px;
+	height: 126px;
+	text-align: center;
+	/* background:
+		url("http://static.dsark.com/dragonica/images/event/161130/footer.jpg")
+		no-repeat 0 0 */
+}
+
+#layer_info {
+	width: 100%;
+	height: 100%;
+	text-align: center
+}
+
+#layer_info .pop_wrapper {
+	top: 300px
+}
+
+#layer_info .pop_conts {
+	width: 520px;
+	height: 354px;
+	margin: auto;
+	clear: both;
+	text-align: center;
+	position: relative;
+	z-index: 9999;
+	border: 2px solid #28a5cb;
+	z-index: 1000;
+	background-color: #082d3a
+}
+
+#layer_info .pop_conts .pop_header {
+	height: 25px
+}
+
+#layer_info .pop_conts .pop_header a {
+	float: right;
+	margin: 11px 13px 0 0
+}
+
+#layer_info .pop_conts .pop {
+	display: none;
+	padding: 30px
+}
+
+#layer_info .pop_conts .item_box {
+	width: 263px;
+	height: 160px;
+	background-color: #fff;
+	border: 2px solid #28a5cb;
+	margin: 0 auto 30px;
+	display: inline-block
+}
+
+#layer_info .pop_conts .item_box img {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	width: 107px;
+	height: 79px
+}
+
+#layer_info .pop_conts .item_box p {
+	color: #000;
+	font-size: 16px;
+	font-weight: 600
+}
+
+#layer_info .pop_conts .off {
+	display: none
+}
+
+#layer_info .btn_area {
+	margin-right: 0
+}
+
+#layer_info .layer_text img {
+	margin-top: 42px;
+	margin-bottom: 35px
+}
+
+#layer_info .layer_text_ph img {
+	margin-top: 42px;
+	margin-bottom: 20px
+}
+
+#layer_info .layer_text_ph input {
+	font-size: 18px;
+	font-family: "나눔고딕", "NanumGothic", "돋움", dotum, sans-serif;
+	line-height: 1.6;
+	border: 1px solid #737373;
+	padding: 0 5px 0 7px !important;
+	height: 45px;
+	background-color: #fff;
+	margin-bottom: 20px
+}
+
+#visual {
+	position: relative;
+    width: 100%;
+    height: 750px;
+    background: url(http://mobile-web-ydonline.ncucu.com/service/hortensia/pc/170103/images/visual02.jpg) no-repeat center top;
+}

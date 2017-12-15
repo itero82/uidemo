@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" >
+<title>레이드헌터</title>
+<link rel="stylesheet" href="http://mobile.web.ydonline.gscdn.com/gacha/css/rh_style.css" type="text/css" />
+<script src="http://mobile.web.ydonline.gscdn.com/img/event/20130820/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="http://mobile.web.ydonline.gscdn.com/img/event/tenmillionsoldier/thanks/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="http://mobile.web.ydonline.gscdn.com/gacha/js/jshashtable.js" type="text/javascript"></script>
+<script src="http://mobile.web.ydonline.gscdn.com/gacha/js/jquery.numberformatter-1.2.2.min.js" type="text/javascript"></script>
+<script src="http://mobile.web.ydonline.gscdn.com/gacha/js/jquery.flipCounter.1.2.pack.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#slt1 ul').hide();
+	$('#slt2 ul').hide();
+	$('.item-title span').hide();
+	$('#slt1 .btn1').click(function(e){
+		$('#slt1 ul').slideToggle();
+		$(this).toggleClass('on');
+		e.preventDefault();
+	});
+	$('#slt2 .btn2').click(function(e){
+		$('#slt2 ul').slideToggle();
+		$(this).toggleClass('on');
+		e.preventDefault();
+	});
+	$('#faq dd').hide();
+	$('#faq dt').click(function(e){
+		$(this).next().slideToggle();
+		$(this).toggleClass('on');
+		e.preventDefault();
+	});
+	$("#counter").flipCounter({
+		imagePath:"flipCounter-medium.png",
+		digitHeight:50,
+		digitWidth:39,
+		formatNumberOptions:{format:"00000000",locale:"de"}
+	});
+	$("#counter").flipCounter("startAnimation", { 
+		number: 55555555,
+		end_number:12345,
+		duration: 500
+	});
+
+	// Clone the first element and append it to the end of the list
+	var list = $('#slotmachine>ul:first');
+	var firstItem = list.find('li:first');
+	firstItem.clone().appendTo(list);
+
+	function moveTo(val) {
+			val = -val % (274*16);
+			if (val > 0) val -= (274*16);
+			$('#slotmachine').css({
+					top: val
+			});
+	}
+
+	function spin(count) {
+			$('#slotmachine').stop().animate({
+					top: -3836
+			}, 4000, 'easeInOutCirc', function () {
+					if (count == 0) {
+							var slot = Math.floor(0),
+									top = -slot * 331,
+									time =  4000 * slot / 16;
+							console.log(count, slot, top, time)
+							$(this).css({
+									top: 0
+							}).animate({
+									top: top
+							},time, 'easeInOutCirc')
+					} else {
+							$(this).css({
+									top: 0
+							})
+							spin(count - 0)
+					};
+			});
+	}
+	$(function () {
+			setTimeout(function(){$('.item-title span').fadeIn();},4000);
+			spin(0);
+	});
+
+});
+</script>
+</head>
+<body>
+<div class="event-wrap">
+	<div class="event-nav">
+		<ul>
+			<li><a href="#" class="btn home">홈</a></li>
+			<li><a href="#" class="btn star">홈 추가</a></li>
+			<li><a href="#" class="btn arr_r">나의 아이템함</a></li>
+			<!--li><a href="#" class="btn">나의 쿠폰함</a></li-->
+			<li class="last"><a href="#" class="btn">로그인</a></li>
+		</ul>
+	</div>
+	<div class="event-top"><img src="http://mobile.web.ydonline.gscdn.com/gacha/img/rh/bg_top.png" alt="레이드헌터"></div>
+	<div class="event-container">
+		<p class="event-date">쿠폰 입력기간<br>2014.4.29 앱 출시 후 ~ 5.13 24시 까지</p>
+		<div class="sub-wrap">
+
+			<div class="section5">
+				<div class="item-wrap">
+					<div class="item-title"><span>헬가이드</span></div>
+					<div class="item-image">
+						<div id="viewbox">
+							<div class="wrapper" id="slotmachine">
+									<ul>
+										<li class="item1"></li>
+										<li class="item2"></li>
+										<li class="item3"></li>
+										<li class="item4"></li>
+										<li class="item5"></li>
+										<li class="item6"></li>
+										<li class="item7"></li>
+										<li class="item8"></li>
+										<li class="item9"></li>
+										<li class="item10"></li>
+										<li class="item11"></li>
+										<li class="item12"></li>
+										<li class="item13"></li>
+										<li class="item14"></li>
+										<li class="item15"></li>
+										<li class="item16"></li>
+									</ul>
+							</div>
+						</div>
+					</div>
+					<div class="btn-set">
+						<a href="#" class="button-1">아이템 확정</a>
+						<a href="#" class="button-3">다시 뽑기</a>
+					</div>
+					<div class="txt1">
+						※ “아이템 확정” 선택을 하시면 이벤트 참여가 완료됩니다.<br>
+						“아이템 확정”은 이벤트 기간 중 단 1회만 가능하며, 받은 아이템은 취소가 불가하니 신중히 선택해주세요.
+					</div>
+				</div>
+			</div>
+
+			<div class="section4">
+				<div class="link">
+				[레이드헌터] 헐~! 대박 대박 대박사건~!!<br>
+				'아이템명' 아이템 당첨을 축하드려요! <br><br>
+				5/17~5/25까지 [레이드헌터]<br>
+				설치하시고, 쿠폰 등록하셔서 아이템 받아 가세요~!<br><br>
+				http://event.ncucu.com/gacha/rh/
+				</div>
+				<a href="#" class="button-2">이벤트 공유하기</a>
+				※ 페이스북에 공유만 해도 아이템 뽑기를 다시 이용할 수 있어요.
+			</div>
+			<div class="event-info">
+				<div id="slt1" class="slt">
+					<a href="#" class="btn1">게임 다운로드</a>
+					<ul>
+						<li class="at"><a href="#">아프리카TV</a></li>
+						<li class="gp"><a href="#">플레이스토어</a></li>
+						<li class="ts"><a href="#">티스토어</a></li>
+						<li class="kt"><a href="#">올레마켓</a></li>
+						<li class="lg"><a href="#">유플러스마켓</a></li>
+						<li class="it"><a href="#">앱스토어</a></li>
+						<li class="nv"><a href="#">네이버</a></li>
+					</ul>
+				</div>
+				<div id="slt2" class="slt">
+					<a href="#" class="btn2">공식 커뮤니티</a>
+					<ul>
+						<li class="fb"><a href="#">페이스북</a></li>
+						<li class="ha"><a href="#">헝그리앱</a></li>
+						<li class="iv"><a href="#">게임인벤</a></li>
+						<li class="gc"><a href="#">게임조선</a></li>
+					</ul>
+				</div>
+			</div>
+			<ul class="tab-button">
+				<li><a href="#guide">참여안내</a></li>
+				<li><a href="#coupon">쿠폰사용방법</a></li>
+				<li><a href="#faq">FAQ</a></li>
+			</ul>
+			<div id="guide" class="event-info1">
+				<div class="tit">01.  아이템 뽑기 참여안내</div>
+				<img src="http://mobile.web.ydonline.gscdn.com/gacha/img/rh/img_manual1.png" alt="">
+				<ul class="list1">
+					<li><strong>아이템 뽑기는 하루에  최대 80번 까지 이용하실 수 있습니다.</strong></li>
+					<li><strong>아이템 뽑기 잔여수가 부족하세요?</strong><p class="txt1">5번 모두 소진하셨더라도, 걱정하지마세요.<br>로그인한 페이스북 계정의 타임라인에 <em>“이벤트 페이지 공유하기”</em>만 해도 5번의 아이템 뽑기 잔여수를 다시 제공합니다.</p></li>
+				</ul>
+				<dl class="box1">
+					<dt>예시</dt>
+					<dd>1회차 페이스북 글쓰기 잔여수 중 3번만 사용하고 1번의 잔여수가 있을 경우, 2회차에는 1회차에서 남은 1번의 잔여수가 누적되지 않으며 해당 시간에 부여된 4번만 다시 제공합니다.</dd>
+				</dl>
+			</div>
+			<div id="coupon" class="event-info1">
+				<div class="tit">02.  쿠폰 확인 및 사용방법</div>
+				<div class="list1">
+					<div class="step"><strong>마이페이지 &gt; 내 찜 리스트</strong><br>아이템 뽑기 진행 시, 내가 찜해둔 아이템 중 1개만 확정</div>
+					<img src="http://mobile.web.ydonline.gscdn.com/gacha/img/rh/7.png" alt="">
+					<div class="step"><strong>마이페이지 &gt; 내 쿠폰함</strong><br>내가 확정한 아이템을 보상 받을 수 있는 쿠폰번호 확인</div>
+					<img src="http://mobile.web.ydonline.gscdn.com/gacha/img/rh/7.png" alt="">
+					<div class="step"><strong>무료 아이템 받기</strong><br>게임 설치/접속 ⇒ 발급 받은 쿠폰번호 입력 ⇒ 아이템 지급 완료</div>
+				</div>
+			</div>
+
+			<div id="faq" class="event-info1">
+				<div class="tit">03.  FAQ</div>
+				<div class="stit">ㆍ이용 안내</div>
+				<dl>
+					<dt>Q. 최대 AP 수치는 어떻게 정해지나요?</dt>
+					<dd>강화 카드는 용병 및 영웅의 스테이터스를 강화에 사용 됩니다.<br>사용 시 기본 스테이터스에 파란색으로 추가 스테이터스가 표시 됩니다.<br><br>*각 스테이터스의 능력<br><br>힘 = 공격력 상승<br>
+					방어 = 방어력 상승<br>SP = 스킬쿨타임 회복속도 상승<br>행동 = 일반공격 턴 회복속도 상승<br>지능 = 스킬 공격력 및 일반 공격력 상승<br>민첩 = 명중률 및 회피율 상승<br>체력 = HP 상승<br></dd>
+				</dl>
+				<dl>
+					<dt>Q. 최대 AP 수치는 어떻게 정해지나요?</dt>
+					<dd>강화 카드는 용병 및 영웅의 스테이터스를 강화에 사용 됩니다.<br>사용 시 기본 스테이터스에 파란색으로 추가 스테이터스가 표시 됩니다.<br><br>*각 스테이터스의 능력<br><br>힘 = 공격력 상승<br>
+					방어 = 방어력 상승<br>SP = 스킬쿨타임 회복속도 상승<br>행동 = 일반공격 턴 회복속도 상승<br>지능 = 스킬 공격력 및 일반 공격력 상승<br>민첩 = 명중률 및 회피율 상승<br>체력 = HP 상승<br></dd>
+				</dl>
+				<dl>
+					<dt>Q. 최대 AP 수치는 어떻게 정해지나요?</dt>
+					<dd>강화 카드는 용병 및 영웅의 스테이터스를 강화에 사용 됩니다.<br>사용 시 기본 스테이터스에 파란색으로 추가 스테이터스가 표시 됩니다.<br><br>*각 스테이터스의 능력<br><br>힘 = 공격력 상승<br>
+					방어 = 방어력 상승<br>SP = 스킬쿨타임 회복속도 상승<br>행동 = 일반공격 턴 회복속도 상승<br>지능 = 스킬 공격력 및 일반 공격력 상승<br>민첩 = 명중률 및 회피율 상승<br>체력 = HP 상승<br></dd>
+				</dl>
+				<div class="stit">ㆍ쿠폰 안내</div>
+				<dl>
+					<dt>Q. 최대 AP 수치는 어떻게 정해지나요?</dt>
+					<dd>강화 카드는 용병 및 영웅의 스테이터스를 강화에 사용 됩니다.<br>사용 시 기본 스테이터스에 파란색으로 추가 스테이터스가 표시 됩니다.<br><br>*각 스테이터스의 능력<br><br>힘 = 공격력 상승<br>
+					방어 = 방어력 상승<br>SP = 스킬쿨타임 회복속도 상승<br>행동 = 일반공격 턴 회복속도 상승<br>지능 = 스킬 공격력 및 일반 공격력 상승<br>민첩 = 명중률 및 회피율 상승<br>체력 = HP 상승<br></dd>
+				</dl>
+				<dl>
+					<dt>Q. 최대 AP 수치는 어떻게 정해지나요?</dt>
+					<dd>강화 카드는 용병 및 영웅의 스테이터스를 강화에 사용 됩니다.<br>사용 시 기본 스테이터스에 파란색으로 추가 스테이터스가 표시 됩니다.<br><br>*각 스테이터스의 능력<br><br>힘 = 공격력 상승<br>
+					방어 = 방어력 상승<br>SP = 스킬쿨타임 회복속도 상승<br>행동 = 일반공격 턴 회복속도 상승<br>지능 = 스킬 공격력 및 일반 공격력 상승<br>민첩 = 명중률 및 회피율 상승<br>체력 = HP 상승<br></dd>
+				</dl>
+				<dl>
+					<dt>Q. 최대 AP 수치는 어떻게 정해지나요?</dt>
+					<dd>강화 카드는 용병 및 영웅의 스테이터스를 강화에 사용 됩니다.<br>사용 시 기본 스테이터스에 파란색으로 추가 스테이터스가 표시 됩니다.<br><br>*각 스테이터스의 능력<br><br>힘 = 공격력 상승<br>
+					방어 = 방어력 상승<br>SP = 스킬쿨타임 회복속도 상승<br>행동 = 일반공격 턴 회복속도 상승<br>지능 = 스킬 공격력 및 일반 공격력 상승<br>민첩 = 명중률 및 회피율 상승<br>체력 = HP 상승<br></dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+	<p class="copyright">Copyright &copy; YD Online Corp.</p>
+</div>
+</body>
+</html>

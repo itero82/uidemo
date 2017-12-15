@@ -1,0 +1,303 @@
+@-webkit-keyframes wave {
+  0% {
+    -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 15px) rotateZ(0deg);
+            transform: rotateZ(0deg) translate3d(0, 10%, 15px) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg) translate3d(0, 10%, 15px) rotateZ(-360deg);
+            transform: rotateZ(360deg) translate3d(0, 10%, 15px) rotateZ(-360deg);
+  }
+}
+@keyframes wave {
+  0% {
+    -webkit-transform: rotateZ(0deg) translate3d(0, 10%, 15px) rotateZ(0deg);
+            transform: rotateZ(0deg) translate3d(0, 10%, 15px) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg) translate3d(0, 10%, 15px) rotateZ(-360deg);
+            transform: rotateZ(360deg) translate3d(0, 10%, 15px) rotateZ(-360deg);
+  }
+}
+body,
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+* { margin:0; padding:0; }
+.background {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  -webkit-perspective: 100vw;
+          perspective: 100vw;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.background_image {
+  position: absolute;
+  width: 130%;
+  height: 127%;
+  margin-left: -15%;
+  margin-top: -8%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background:black url('../test_bg.jpg') no-repeat;
+  background-size: cover;
+  will-change: transform;
+}
+.background_image img {
+  opacity: 1;
+  position: absolute;
+  max-width: 90%;
+}
+
+.background_image-smoke-cloud1 {
+  -webkit-animation: wave 8s 0.1s infinite linear;
+          animation: wave 8s 0.1s infinite linear;
+  display: block;
+  right: 40%;
+  bottom: 0;
+}
+.background_image-smoke-cloud2 {
+  left: -14%;
+  bottom: -6%;
+  -webkit-animation: wave 9s 0.1s infinite linear;
+          animation: wave 9s 0.1s infinite linear;
+}
+.background_image-smoke-cloud3 {
+  right: -4%;
+  bottom: -17%;
+  -webkit-animation: wave 10s 0.1s infinite linear;
+          animation: wave 10s 0.1s infinite linear;
+}
+.background_image-cr1 {
+  left: 50%;
+  margin-left:-20%;
+  top: 10%;
+  width: 40%;
+  -webkit-animation: wave 10s 0.1s infinite linear;
+          animation: wave 10s 0.1s infinite linear;
+
+}
+
+.background_dot {
+  position: absolute;
+  opacity: 0.7;
+  z-index: 3;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+  box-shadow: inset 0 0 15px #333;
+  will-change: transform;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+.background_dot:nth-child(1) {
+  top: 15%;
+  left: 72%;
+  background-color: #45a0cb;
+}
+.background_dot:nth-child(2) {
+  top: 53%;
+  left: 75%;
+  background-color: #37d5bf;
+}
+.background_dot:nth-child(3) {
+  top: 41%;
+  left: 46%;
+  background-color: #89c2a6;
+}
+.background_dot:nth-child(4) {
+  top: 54%;
+  left: 53%;
+  background-color: #7a9f8d;
+}
+.background_dot:nth-child(5) {
+  top: 20%;
+  left: 52%;
+  background-color: #a16483;
+}
+.background_dot:nth-child(6) {
+  top: 81%;
+  left: 71%;
+  background-color: #e3ff0d;
+}
+.background_dot:nth-child(7) {
+  top: 47%;
+  left: 20%;
+  background-color: #4238ae;
+}
+.background_dot:nth-child(8) {
+  top: 13%;
+  left: 50%;
+  background-color: #ea76fe;
+}
+.background_dot:nth-child(9) {
+  top: 79%;
+  left: 42%;
+  background-color: #28294c;
+}
+.background_dot:nth-child(10) {
+  top: 40%;
+  left: 54%;
+  background-color: #e42b4d;
+}
+.background_dot:nth-child(11) {
+  top: 89%;
+  left: 64%;
+  background-color: #76219a;
+}
+.background_dot:nth-child(12) {
+  top: 48%;
+  left: 81%;
+  background-color: #feebfb;
+}
+.background_dot:nth-child(13) {
+  top: 21%;
+  left: 44%;
+  background-color: #817c7d;
+}
+.background_dot:nth-child(14) {
+  top: 24%;
+  left: 66%;
+  background-color: #02b956;
+}
+.background_dot:nth-child(15) {
+  top: 22%;
+  left: 65%;
+  background-color: #8a5771;
+}
+.background_dot:nth-child(16) {
+  top: 30%;
+  left: 72%;
+  background-color: #98402d;
+}
+.background_dot:nth-child(17) {
+  top: 35%;
+  left: 70%;
+  background-color: #a3dd5b;
+}
+.background_dot:nth-child(18) {
+  top: 31%;
+  left: 26%;
+  background-color: #ec3bc2;
+}
+.background_dot:nth-child(19) {
+  top: 15%;
+  left: 49%;
+  background-color: #945986;
+}
+.background_dot:nth-child(20) {
+  top: 16%;
+  left: 64%;
+  background-color: #8b703e;
+}
+.background_dot:nth-child(21) {
+  top: 36%;
+  left: 51%;
+  background-color: #a79e85;
+}
+.background_dot:nth-child(22) {
+  top: 70%;
+  left: 37%;
+  background-color: #46b3a1;
+}
+.background_dot:nth-child(23) {
+  top: 21%;
+  left: 41%;
+  background-color: #c98ff8;
+}
+.background_dot:nth-child(24) {
+  top: 63%;
+  left: 63%;
+  background-color: #bc7094;
+}
+.background_dot:nth-child(25) {
+  top: 55%;
+  left: 18%;
+  background-color: #89983c;
+}
+.background_dot:nth-child(26) {
+  top: 81%;
+  left: 78%;
+  background-color: #344b93;
+}
+.background_dot:nth-child(27) {
+  top: 19%;
+  left: 33%;
+  background-color: #8e3ef0;
+}
+.background_dot:nth-child(28) {
+  top: 35%;
+  left: 49%;
+  background-color: #3e2a1d;
+}
+.background_dot:nth-child(29) {
+  top: 90%;
+  left: 59%;
+  background-color: #11dee2;
+}
+.background_dot:nth-child(30) {
+  top: 56%;
+  left: 74%;
+  background-color: #e0eccd;
+}
+.background_dot:nth-child(31) {
+  top: 24%;
+  left: 63%;
+  background-color: #d366e1;
+}
+.background_dot:nth-child(32) {
+  top: 63%;
+  left: 22%;
+  background-color: #84b881;
+}
+.background_dot:nth-child(33) {
+  top: 61%;
+  left: 18%;
+  background-color: #6debee;
+}
+.background_dot:nth-child(34) {
+  top: 70%;
+  left: 45%;
+  background-color: #9c661c;
+}
+.background_dot:nth-child(35) {
+  top: 42%;
+  left: 47%;
+  background-color: #540804;
+}
+.background_dot:nth-child(36) {
+  top: 71%;
+  left: 31%;
+  background-color: #03e31a;
+}
+.background_dot:nth-child(37) {
+  top: 42%;
+  left: 25%;
+  background-color: #1da3a4;
+}
+.background_dot:nth-child(38) {
+  top: 37%;
+  left: 66%;
+  background-color: #a1c9bc;
+}
+.background_dot:nth-child(39) {
+  top: 63%;
+  left: 29%;
+  background-color: #21c263;
+}
+.background_dot:nth-child(40) {
+  top: 58%;
+  left: 20%;
+  background-color: #ec3aeb;
+}
+.background_dot:nth-child(41) {
+  top: 58%;
+  left: 52%;
+  background-color: #5c2270;
+}

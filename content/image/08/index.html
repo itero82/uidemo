@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<style>
+* {margin:0; padding:0;}
+#wapper {position:relative; background:url('bg.jpg') no-repeat center top; width:100%; height:750px;}
+#con{position:relative; width:990px;margin:0 auto;}
+#title {position:relative; background:url('title.png') no-repeat center top; width:100%; height:750px; z-index:9;}
+#ball {
+    background: url("ball.png") no-repeat scroll 0 0 transparent;
+    top:180px;
+    height: 168px;
+    padding: 0 0 0 0;
+    position: absolute;
+    left:750px;
+    width: 168px;
+}
+</style>
+
+</head>
+<body>
+<div id="wapper">
+    <div id="con">
+        <div id="title"></div>
+        <div id="ball"></div>
+    </div>
+</div>
+
+<script type="text/javaScript" src="http://mobile-web-ydonline.ncucu.com/ui/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="http://mobile-web-ydonline.ncucu.com/ui/js/jquery.easing-1.3.min.js"></script>
+<script>
+$(function () {
+    Up();
+
+    function Up() {
+        $('#ball').animate({
+            'top': 200
+        }, 1000, null, Down);
+    }
+
+    function Down() {
+        $('#ball').animate({
+            'top': 180
+        }, 700, null, Up);
+    }
+});
+</script>
+
+</body>
+</html>

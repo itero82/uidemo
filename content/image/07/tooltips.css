@@ -1,0 +1,105 @@
+body {
+    background: url(../images/bg.jpg) repeat;
+    font-family: Consolas, Trebuchet MS;
+    font-size: 16px;
+    text-align: center;
+}
+
+a {color: #3D668F;}
+
+h2, h3 {color: #3D668F;}
+
+h2 {font-size: 34px;}
+h3 {font-size: 28px;}
+
+ul {
+    margin: 0 auto;
+    width: 960px;
+    font-size: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+ul li {
+    list-style: none;
+    display: inline;
+    margin: 0 20px;
+}
+
+p {
+    width: 860px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+a.tooltip_link {
+    position: relative !important;
+}
+
+.tooltip {
+    display: none;
+    position: absolute !important;
+    width: 200px;
+    background: rgba(61,102,143,0.9);
+    padding: 5px;
+    margin: 0 0 12px 0;
+    color: #fff;
+    z-index: 100;
+    bottom: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.tooltip:after {
+    content: "";
+    position: absolute !important;
+    bottom: -14px;
+    z-index: 100;
+    border: 0 solid rgba(61,102,143,0.9);
+    border-bottom: 14px solid transparent;
+    width: 100%;
+}
+
+.tooltip:before {
+    content: "";
+    position: absolute !important;
+    border: 0 solid rgba(61,102,143,0.9);
+    bottom: -14px;
+    z-index: 100;
+}
+
+.tooltip.left {
+    border-radius: 5px 5px 5px 0;
+}
+
+.tooltip.left:after {
+    border-left-width: 14px;
+    left: 0;
+}
+
+.tooltip.right {
+    border-radius: 5px 5px 0 5px;
+}
+
+.tooltip.right:after {
+    border-right-width: 14px;
+    right: 0;
+}
+
+.tooltip.center {
+    border-radius: 5px;
+}
+
+.tooltip.center:after {
+    border-left-width: 10px;
+    width: 50%;
+    left: 50%;
+}
+
+.tooltip.center:before {
+    border-right-width: 10px;
+    border-bottom: 14px solid transparent;
+    width: 50%;
+    right: 50%;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+body {font-size:18px; color:#000; line-height:26px; font-family:Arial;}
+li {list-style:none;}
+ul,li,h1,h2,h3,h4,h5,ol,dl,dt,dd,p,body {margin:0; padding:0;}
+h1,h2,h3,h4,h5,b,strong,th {font-weight:normal;}
+body {overflow:hidden; background:#000;}
+#mask {width:300px; height:800px; position:absolute; left:50%; margin:-400px 0 0 -150px; top:50%; overflow:hidden; z-index:100; background:url('mask.png') no-repeat left top;}
+#wrap {width:300px; height:800px; position:absolute; left:50%; margin:-400px 0 0 -150px; top:50%; overflow:hidden; background:#0a0101;}
+#wrap b {display:none;}
+#restart {color:#fff; z-index:10; padding:3px 15px; border-radius:5px; cursor:pointer; background:#666; position:absolute; right:10px; top:10px;}
+#restart:hover {background:#333;}
+#stop {color:#fff; z-index:10; padding:3px 15px; border-radius:5px; cursor:pointer; background:#666; position:absolute; right:100px; top:10px;}
+#stop:hover {background:#333;}
+.obj  {display:block; position:absolute; overflow:hidden; font-size:0; line-height:0; box-shadow:0 0 5px #333; opacity:0.8;}
+.cc {position:relative; z-index:1000;}
+.cc li {width:30px; height:30px; float:left; margin:10px; border-radius:15px;}
+.color1 {background:#811915; background:-webkit-radial-gradient(3px 3px,#811915,#6c0d0a);}
+.color2 {background:#d91c23; background:-webkit-radial-gradient(center,#d91c23,#cc161d);}
+.color3 {background:#771d19; background:-webkit-radial-gradient(center,#771d19,#5d1210);}
+.color4 {background:#833532; background:-webkit-radial-gradient(center,#833532,#6f2825);}
+.color5 {background:#5a312f; background:-webkit-radial-gradient(center,#5a312f,#432120);}
+.color6 {background:#3e0d0b; background:-webkit-radial-gradient(center,#3e0d0b,#280504);}
+.color7 {background:#2a0d0c; background:-webkit-radial-gradient(center,#2a0d0c,#1d0706);}
+.color8 {background:#482b2a; background:-webkit-radial-gradient(center,#482b2a,#321a19);}
+.circle1 {width:4px; height:4px; border-radius:2px;}
+.circle2 {width:8px; height:8px; border-radius:3px;}
+.circle3 {width:2px; height:2px; border-radius:1px;}
+.circle4 {width:6px; height:6px; border-radius:3px;}
+.circle5 {width:10px; height:10px; border-radius:5px;}
+.circle6 {width:20px; height:20px; border-radius:10px;}
+.circle7 {width:10px; height:10px; border-radius:7px; border:2px solid #7c2828; background:none; box-shadow:none; opacity:0.2;}
+.circle8 {width:6px; height:6px; border-radius:4px; border:1px solid #a32b2b; background:none; box-shadow:none; opacity:0.3;}
+</style>
+<script src="../../../js/jquery.js"></script>
+<script src="../../../js/jquery.easing.js"></script>
+<script>
+$(function(){
+	function coca(){	
+		$.easing.def = "easeInExpo";		
+		$("#wrap b").show(1000).animate({top:0},3000,function(){
+			$(this).remove();	
+		});
+		var h = $("#wrap").height();
+		var w = $("#wrap").width();
+		var a = Math.floor((Math.random()*8+1));	
+		var b = Math.floor((Math.random()*8+1));	
+		var c = Math.floor((Math.random()*w+1));	
+		var d = Math.floor((Math.random()*h+1));		
+		$("<b class='obj circle"+a+" color"+b+"' style='left:"+c+"px; top:"+d+"px;'></b>").appendTo("#wrap").show(1000).animate({top:0},3000,function(){
+			$(this).remove();	
+		});
+	}
+	$("#restart").click(function(){
+		$("#wrap").html("");
+	});
+	start = setInterval(coca,1);
+});
+</script>
+</head>
+<body>
+<div id="restart">restart</div>
+<div id="mask"></div>
+<div id="wrap"></div>
+<ul class="cc">
+	<li class="color1"></li>
+	<li class="color2"></li>
+	<li class="color3"></li>
+	<li class="color4"></li>
+	<li class="color5"></li>
+	<li class="color6"></li>
+	<li class="color7"></li>
+	<li class="color8"></li>
+</ul>
+</body>
+</html>
+

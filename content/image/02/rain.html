@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<script type="text/javascript" src="./jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="http://mobile-web-ydonline.ncucu.com/uidemo/content/image/02/makeRain.js"></script>
+	<style type="text/css">
+ html,body {height:100%;}
+ *{margin:0; padding:0;}
+ #wrapper{position:relative; height:100%; width:100%;}
+		#rainBox, #literalRainBox {	
+			position:relative;height:100%; width:100%;
+		}
+	</style>
+</head>
+<body>
+	<!--
+	<h2>Make Rain Demo</h2>
+	<p>-jQuery가 필요합니다.</p>
+	<p>-빗방울 이미지는 반드시 비를 내릴 엘리먼트의 자식 엘리먼트여야 합니다.</p>
+	<p>-비를 내릴 영역과 빗방울 크기를 고려해 떨어지는 속도 등을 정할 수 있습니다.</p>
+	<p>-makeRain(비내릴 영역 jQuery 엘리먼트, 빗방울 jQuery엘리먼트, {비 옵션})</p>
+	<p>-비 옵션<br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;angle : 떨어지는 각도 (270이 수직으로 떨어지는 각도)<br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;speed : 떨어지는 속도 (단위: 밀리세컨드. 1000이 1초)<br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;minRain : 한번에 생성되는 빗방울 최소 수<br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;maxRain : 한번에 생성되는 빗방울 최대 수<br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;rainInterVal : 빗방울 뿌리는 시간간격 (단위: 밀리세컨드)
+	</p>
+	
+	<div id="rainBox">
+		<img class="img_rain" src="./test_rain.png" />icon_cafe.png
+	</div>
+	<br/>
+	<p>이런 응용도 가능합니다.</p>
+
+	-->
+ <div id="wrapper">
+	<div id="literalRainBox">
+		<span class="span_rain"><img class="img_rain" src="icon01.png" /></span>
+		<span class="span_rain2"><img class="img_rain" src="icon02.png" /></span>
+		<span class="span_rain3"><img class="img_rain" src="icon03.png" /></span>
+		<span class="span_rain4"><img class="img_rain" src="icon04.png" /></span>
+	</div>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var $box=$("#rainBox");
+			var $rain=$("#rainBox > .img_rain");
+			
+			//makeRain($box, $rain, {});
+			//기본 설정값. 아래 줄 역시 똑같이 동작함.
+			//makeRain($box, $rain, {angle:270, speed:1200, minRain:3, maxRain:6, rainInterval:300});
+			
+			
+			
+			//응용
+			var $box2=$("#literalRainBox");
+			var $rain1=$("#literalRainBox > .span_rain");
+			var $rain2=$("#literalRainBox > .span_rain2");
+			var $rain3=$("#literalRainBox > .span_rain3");
+			var $rain4=$("#literalRainBox > .span_rain4");
+			
+			makeRain($box2, $rain1, {angle:250, speed:8000, minRain:3, maxRain:4, rainInterval:1000});
+			makeRain($box2, $rain2, {angle:220, speed:9000, minRain:3, maxRain:5, rainInterval:2000});
+			makeRain($box2, $rain3, {angle:270, speed:7500, minRain:3, maxRain:4, rainInterval:1500});
+			makeRain($box2, $rain4, {angle:240, speed:8500, minRain:3, maxRain:5, rainInterval:1800});
+		});
+	</script>
+</body>
+</html>

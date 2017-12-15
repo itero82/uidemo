@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /
+<meta name="viewport" content="width=device-width" />
+<title>룰렛 가챠</title>
+<link rel="stylesheet" href="./css/style.css" asp-append-version="true" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="./js/rotate.js"></script>
+<script src="./js/main.js"></script>	
+</head>
+<body>
+<div id="visual">
+</div>
+<div id="layer_info" class="modal" style="display:none;" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pop_wrapper modal-dialog">
+        <!--tab-->
+        <!--//tab-->
+        <!--cont-->
+        <div class="pop_conts">      
+            <div class="pop_header">
+                <a href="javascript:void(0);" onclick="closeLayerPop()"><img src="http://static.dsark.com/dragonica/images/event/161130/layer_btn_close.gif"></a>
+            </div>
+            
+            <div id="popResult" class="pop">
+                <div class="item_box">
+                    <img src="http://static.dsark.com/dragonica/images/event/161130/item_box.png" class="imgGetItem">
+                    <p class="lblGetItem">아이템명</p>
+                </div>
+                <div class="btn_area">
+                    
+                    <a href="javascript:void(0);" onclick="openLayerPop('popDialogRetry')">
+                        <img src="http://static.dsark.com/dragonica/images/event/161130/layer_btn_return.gif"></a>
+                </div>
+            </div>
+            
+            <div id="popDialogGet" class="pop">
+                <div class="layer_text">
+                    <img src="http://static.dsark.com/dragonica/images/event/161130/layer_text_get.png">
+                </div>
+                <div class="btn_area">
+                    <a href="javascript:void(0);" onclick="getItemsMine()">
+                        <img src="http://static.dsark.com/dragonica/images/event/161130/layer_btn_ok.gif"></a>
+                </div>
+            </div>
+            
+            <div id="popDialogRetry" class="pop">
+                <div class="layer_text">
+                    <img src="http://static.dsark.com/dragonica/images/event/161130/layer_text_return.png">
+                </div>
+                <div class="btn_area">
+                    <a href="javascript:void(0);" onclick="retryRoulette()"><img src="http://static.dsark.com/dragonica/images/event/161130/layer_btn_return.gif"></a>
+                </div>
+            </div>
+            
+            <div id="popMyItem" class="pop">
+                <div class="item_box">
+                    <img src="http://static.dsark.com/dragonica/images/event/161130/다이아 600개.png" class="imgMyItem">
+                    <p class="lblMyItem">다이아 600개</p>
+                </div>
+                <div class="btn_area">
+                    <a href="javascript:void(0);" onclick="closeLayerPop()"><img src="http://static.dsark.com/dragonica/images/event/161130/layer_btn_ok.gif"></a>
+                </div>
+            </div>
+            
+            <div id="popCharge" class="pop">
+                <div class="layer_text">
+                    <img src="http://static.dsark.com/dragonica/images/event/161130/layer_text_fb.png">
+                </div>
+                <div class="btn_area">
+                    <a href="javascript:void(0);" onclick="checkShareQualifying()"><img src="http://static.dsark.com/dragonica/images/event/161130/layer_btn_fb.png"></a>
+                </div>
+            </div>
+        </div>
+        <!--//cont-->
+    </div>
+</div>
+
+	<div class="inner_wrap">
+		<div class="inner_container">
+
+			<div class="col_C" id="section3">
+				<div class="roulette">
+					<!--돌림판-->
+					<img src="http://static.dsark.com/dragonica/images/event/161130/wheel_bg.png"class="roulette_bg" /> 
+					<img src="http://static.dsark.com/dragonica/images/event/161130/btn_wheel_arrow.png" class="roulette_arrow" /> 
+					<img src="http://static.dsark.com/dragonica/images/event/161130/wheel_main.png" class="roulette_img" /> 
+					<a href="javascript:void(0);" class="roulette_start on" onclick="rouletteStart()"> 
+					<span>가능 횟수 3회</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<input type="hidden" id="hidItemPath"
+		value="http://static.dsark.com/dragonica/images/event/161130/다이아 700개.png">
+	<input type="hidden" id="hidItemNm" value="다이아 700개" />
+	<input type="hidden" id="hidTrySeq" />
+	</div>
+
+</body>
+
+</html>
